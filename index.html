@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estética Lucrativa | Operação Caixa de Natal</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#E50914',
+              redHover: '#b80710',
+              gold: '#F59E0B',
+              dark: '#08090C',
+              cardDark: '#11141A',
+              cardBorder: '#1E232D',
+              lightBg: '#F8FAFC'
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'shimmer': 'shimmer 2.5s infinite',
+          },
+          keyframes: {
+            shimmer: {
+              '100%': { transform: 'translateX(100%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #08090C;
+      color: #E2E8F0;
+    }
+    .radial-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(229, 9, 20, 0.15) 0%, rgba(8, 9, 12, 0) 70%);
+    }
+    .badge-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .badge-shimmer::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      animation: shimmer 3s infinite;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-red selection:text-white relative">
+
+  <!-- ==============================================
+       BARRA DE URGÊNCIA (TOPO - NATAL)
+  ============================================== -->
+  <div class="bg-gradient-to-r from-brand-red via-red-600 to-brand-red text-white py-2.5 px-4 text-center font-bold text-xs sm:text-sm tracking-wide shadow-lg relative z-50">
+    <div class="flex items-center justify-center gap-2 flex-wrap">
+      <span class="inline-flex items-center justify-center px-2 py-0.5 rounded bg-black/30 text-[11px] uppercase tracking-wider font-black">
+        🎄 Operação Fim de Ano
+      </span>
+      <span>Faltam apenas <strong>algumas semanas para o Natal</strong>: Coloque de R$ 3.000 a R$ 5.000 no bolso antes da virada do ano!</span>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       1. HERO SECTION (Urgência + Transformação)
+  ============================================== -->
+  <header class="relative pt-8 sm:pt-14 pb-20 border-b border-white/5 overflow-hidden radial-glow">
+    
+    <!-- Imagem de Fundo Hero (Mais Visível & Contraste Calibrado) -->
+    <img 
+      src="fundo-hero.png" 
+      alt="Fundo Estúdio" 
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-45"
+      onerror="this.style.display='none'"
+    >
+    <!-- Máscara suave para manter o texto 100% legível -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#08090C]/40 via-[#08090C]/75 to-[#08090C]"></div>
+    <div class="absolute inset-0 bg-black/20"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Social Proof Badge -->
+      <div class="flex justify-center lg:justify-start">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-cardDark border border-brand-cardBorder/80 mb-6 shadow-inner">
+          <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span class="text-xs font-semibold text-slate-300">
+            Mais de <strong class="text-white">1.480 alunos</strong> faturando em 2026
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Copy Hero -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.15]">
+            COMO FATURAR DE <br class="hidden sm:block">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-red-500 to-orange-400 drop-shadow-[0_0_25px_rgba(229,9,20,0.35)]">
+              R$ 3.000 A R$ 5.000
+            </span><br>
+            ATÉ O NATAL COM ESTÉTICA AUTOMOTIVA.
+          </h1>
+          
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
+            Aprenda o passo a passo para começar do <strong class="text-white">absoluto zero</strong> investindo menos de R$ 100 em produtos e fechando serviços de R$ 150 a R$ 300 já nos próximos dias. Sem oficina e sem equipamentos caros.
+          </p>
+
+          <!-- Grid 4 Microbenefícios (UPGRADE VISUAL COM CONTRASTE & GLOW) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-left">
+            
+            <!-- Item 1 -->
+            <div class="group relative flex items-center gap-3.5 p-3.5 rounded-2xl bg-gradient-to-r from-[#141822] to-[#0D1017] border border-white/10 hover:border-emerald-500/50 shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] transition-all duration-300">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:scale-110 transition duration-300">
+                <i data-lucide="check-check" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-medium text-slate-300 leading-tight">
+                Investimento inicial: <strong class="text-white font-extrabold text-xs block sm:inline">Menos de R$ 100</strong>
+              </span>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="group relative flex items-center gap-3.5 p-3.5 rounded-2xl bg-gradient-to-r from-[#141822] to-[#0D1017] border border-white/10 hover:border-emerald-500/50 shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] transition-all duration-300">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:scale-110 transition duration-300">
+                <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-medium text-slate-300 leading-tight">
+                Preço cobrado: <strong class="text-emerald-400 font-extrabold text-xs block sm:inline">R$ 150 a R$ 300 / carro</strong>
+              </span>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="group relative flex items-center gap-3.5 p-3.5 rounded-2xl bg-gradient-to-r from-[#141822] to-[#0D1017] border border-white/10 hover:border-emerald-500/50 shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] transition-all duration-300">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:scale-110 transition duration-300">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-medium text-slate-300 leading-tight">
+                Meta: <strong class="text-white font-extrabold text-xs block sm:inline">Apenas 2 a 3 carros por semana</strong>
+              </span>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="group relative flex items-center gap-3.5 p-3.5 rounded-2xl bg-gradient-to-r from-[#141822] to-[#0D1017] border border-white/10 hover:border-brand-red/50 shadow-lg hover:shadow-[0_0_20px_rgba(229,9,20,0.2)] transition-all duration-300">
+              <div class="w-9 h-9 rounded-xl bg-brand-red/15 border border-brand-red/30 flex items-center justify-center text-brand-red shrink-0 shadow-[0_0_15px_rgba(229,9,20,0.35)] group-hover:scale-110 transition duration-300">
+                <i data-lucide="trending-up" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-medium text-slate-300 leading-tight">
+                Pico histórico de <strong class="text-brand-red font-extrabold text-xs block sm:inline">Demanda no Natal</strong>
+              </span>
+            </div>
+
+          </div>
+
+          <!-- CTA Hero -->
+          <div class="pt-4 space-y-4">
+            <a href="#oferta" class="badge-shimmer relative inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 text-base sm:text-lg font-black tracking-wide text-white uppercase rounded-xl bg-brand-red hover:bg-brand-redHover transition-all duration-300 shadow-[0_0_35px_rgba(229,9,20,0.45)] hover:scale-[1.02]">
+              QUERO ME ESPECIALIZAR
+              <i data-lucide="arrow-right" class="w-5 h-5 ml-2.5"></i>
+            </a>
+
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400 font-medium">
+              <span class="inline-flex items-center gap-1.5"><i data-lucide="zap" class="w-4 h-4 text-brand-gold"></i> Acesso Imediato</span>
+              <span class="inline-flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Risco Zero (7 Dias)</span>
+              <span class="inline-flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-blue-400"></i> Certificado Reconhecido</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mockup com Moldura Premium -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-xs sm:max-w-sm aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-cardBorder via-brand-cardDark to-brand-cardBorder p-1.5 shadow-[0_0_50px_rgba(0,0,0,0.8)] group">
+            <div class="w-full h-full rounded-[22px] overflow-hidden relative bg-brand-dark">
+              <img 
+                src="hero.png" 
+                alt="E-book Estética Lucrativa" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                onerror="this.src='https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=700&q=80'"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+              
+              <!-- Selo Flutuante de Bônus de Fim de Ano -->
+              <div class="absolute top-4 right-4 bg-brand-red/90 backdrop-blur-md border border-white/20 text-white px-3 py-1.5 rounded-full text-[11px] font-black uppercase tracking-wider shadow-lg">
+                Edição 2026
+              </div>
+
+              <div class="absolute bottom-5 left-5 right-5 text-left bg-black/60 backdrop-blur-md p-3.5 rounded-xl border border-white/10">
+                <p class="text-[11px] font-bold uppercase text-brand-red tracking-wider">Manual Prático de Execução</p>
+                <p class="text-xs text-white font-medium">Do 1º produto à captação do cliente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================================
+       POR QUE O NATAL É A ÉPOCA MAIS FÁCIL DO ANO?
+  ============================================== -->
+  <section class="py-14 bg-gradient-to-b from-[#08090C] to-[#0E1117] border-b border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <span class="text-xs font-black tracking-widest uppercase text-brand-gold">O Momento Perfeito</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2 mb-4 uppercase">
+        Por que é quase impossível você não faturar até o Natal?
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+        Entre novembro e dezembro acontece o maior movimento do setor automotivo no Brasil. As pessoas recebem o <strong>13º salário</strong>, vão viajar em família e recusam-se a passar o réveillon com o carro feio, fosco ou sujo.
+      </p>
+
+      <!-- Grid 3 Cards de Oportunidade (UPGRADE VISUAL COM GLOW & PROFUNDIDADE) -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        
+        <!-- Card 1: Bolso Cheio -->
+        <div class="group relative p-6 rounded-3xl bg-gradient-to-b from-[#141822] via-[#0E1118] to-[#08090C] border border-white/10 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_10px_30px_rgba(16,185,129,0.2)] flex flex-col items-center text-center">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4 shadow-[0_0_20px_rgba(16,185,129,0.25)] group-hover:scale-110 transition duration-300">
+            <i data-lucide="wallet" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-base font-extrabold text-white mb-2 uppercase tracking-wide">Bolso Cheio</h3>
+          <p class="text-xs text-slate-300 leading-relaxed font-normal">
+            <strong class="text-emerald-400 font-bold">13º salário</strong> na conta dos donos de carros prontos para gastar.
+          </p>
+        </div>
+
+        <!-- Card 2: Viagens de Fim de Ano -->
+        <div class="group relative p-6 rounded-3xl bg-gradient-to-b from-[#141822] via-[#0E1118] to-[#08090C] border border-white/10 hover:border-brand-red/50 transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_10px_30px_rgba(229,9,20,0.2)] flex flex-col items-center text-center">
+          <div class="w-14 h-14 rounded-2xl bg-brand-red/10 border border-brand-red/30 flex items-center justify-center text-brand-red mb-4 shadow-[0_0_20px_rgba(229,9,20,0.3)] group-hover:scale-110 transition duration-300">
+            <i data-lucide="car" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-base font-extrabold text-white mb-2 uppercase tracking-wide">Viagens de Fim de Ano</h3>
+          <p class="text-xs text-slate-300 leading-relaxed font-normal">
+            Ninguém viaja pra praia ou interior com <strong class="text-white font-bold">pintura encardida e farol amarelado</strong>.
+          </p>
+        </div>
+
+        <!-- Card 3: Oficinas Lotadas -->
+        <div class="group relative p-6 rounded-3xl bg-gradient-to-b from-[#141822] via-[#0E1118] to-[#08090C] border border-white/10 hover:border-brand-gold/50 transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_10px_30px_rgba(245,158,11,0.2)] flex flex-col items-center text-center">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-4 shadow-[0_0_20px_rgba(245,158,11,0.25)] group-hover:scale-110 transition duration-300">
+            <i data-lucide="clock-alert" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-base font-extrabold text-white mb-2 uppercase tracking-wide">Oficinas Lotadas</h3>
+          <p class="text-xs text-slate-300 leading-relaxed font-normal">
+            As grandes estéticas cobram R$ 800+. Você entra atendendo rápido por <strong class="text-brand-gold font-bold">R$ 200</strong>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       2. QUALIFICAÇÃO (Para quem é vs Não é)
+  ============================================== -->
+  <section class="py-20 bg-brand-lightBg text-slate-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-slate-950">
+          ESSE MÉTODO É PARA A SUA REALIDADE?
+        </h2>
+        <p class="mt-2 text-slate-600 text-sm sm:text-base font-medium">Seja sincero consigo mesmo antes de garantir o acesso.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- SIM (Verde) -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border-t-4 border-emerald-500 transition-all hover:translate-y-[-2px]">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+              <i data-lucide="check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-extrabold text-base sm:text-lg text-slate-900 uppercase">Essa Especialização é para você que:</h3>
+          </div>
+          <ul class="space-y-4 text-sm text-slate-700">
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Quer garantir de <strong>R$ 3 a 5 mil extras</strong> para ter um fim de ano farto e sem dívidas.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Trabalha CLT ou está desempregado e só tem o período da noite ou os fins de semana livres.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Tem pouco ou nenhum dinheiro (comece com um kit inicial de menos de R$ 100).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Pode atender a domicílio, no condomínio de amigos ou na própria garagem de casa.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- NÃO (Vermelho) -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border-t-4 border-brand-red transition-all hover:translate-y-[-2px]">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-brand-red shrink-0">
+              <i data-lucide="x" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-extrabold text-base sm:text-lg text-slate-900 uppercase">Essa Especialização Não é para você que:</h3>
+          </div>
+          <ul class="space-y-4 text-sm text-slate-700">
+            <li class="flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 text-brand-red shrink-0 mt-0.5"></i>
+              <span>Acredita em fórmula mágica de ficar rico deitado no sofá sem encostar a mão no carro.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 text-brand-red shrink-0 mt-0.5"></i>
+              <span>Tem vergonha de mandar mensagem para conhecidos oferecendo um serviço impecável.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 text-brand-red shrink-0 mt-0.5"></i>
+              <span>Acha que precisa de politriz importada de R$ 3.000 antes de fechar o primeiro trabalho.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 text-brand-red shrink-0 mt-0.5"></i>
+              <span>Prefere continuar reclamando da falta de dinheiro no Natal a aplicar um roteiro validado.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       3. SIMULADOR DE FATURAMENTO (A Matemática Real)
+  ============================================== -->
+  <section class="py-20 bg-brand-dark border-b border-white/5 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      
+      <span class="text-xs font-black tracking-widest uppercase text-brand-red">A Conta Fecha</span>
+      <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight text-white mt-1 mb-3">
+        A MATEMÁTICA PARA OS PRÓXIMOS DIAS
+      </h2>
+      <p class="text-sm text-slate-400 max-w-xl mx-auto mb-12">
+        Veja como é 100% tangível colocar esse valor na sua conta bancária até o Natal sem se sobrecarregar:
+      </p>
+
+      <!-- Grid Simulador (UPGRADE BRUTAL DE CONTRASTE & ALINHAMENTO) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        
+        <!-- Cenário 1: R$ 3.000 (Plano de Entrada) -->
+        <div class="group relative rounded-3xl bg-gradient-to-b from-[#141822] via-[#0E1118] to-[#08090C] border border-white/10 hover:border-slate-600 transition-all duration-300 p-6 sm:p-8 text-left shadow-xl flex flex-col justify-between">
+          <div>
+            <!-- Header do Card com Tag sem quebrar -->
+            <div class="flex items-center justify-between gap-2 mb-6">
+              <span class="px-3.5 py-1.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-white/5 text-slate-300 border border-white/10">
+                Plano de Entrada
+              </span>
+              <span class="text-xs font-bold text-slate-400 bg-black/40 px-3 py-1 rounded-lg border border-white/5">
+                2 serviços/semana
+              </span>
+            </div>
+
+            <!-- Dados com destaque nos pontos-chave -->
+            <div class="space-y-3 mb-6">
+              <p class="text-xs text-slate-400 flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-slate-500 shrink-0"></i>
+                Atendimentos no sábado e domingo
+              </p>
+              <p class="text-sm text-slate-300 flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-slate-500 shrink-0"></i>
+                Cobrando em média: <strong class="text-white font-extrabold text-base ml-1">R$ 200</strong>
+              </p>
+              <p class="text-xs text-slate-400 flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-slate-500 shrink-0"></i>
+                Total de atendimentos em 7 semanas: <strong class="text-white font-bold ml-1">15 clientes</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- Totalizador -->
+          <div class="pt-5 border-t border-white/10 bg-black/20 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-6 sm:p-8 rounded-b-3xl">
+            <span class="text-[11px] uppercase tracking-wider text-slate-400 block font-bold">Faturamento até o Natal:</span>
+            <div class="text-3xl sm:text-4xl font-black text-brand-red mt-1 drop-shadow-[0_0_20px_rgba(229,9,20,0.35)]">
+              R$ 3.000,00
+            </div>
+            <span class="text-xs text-emerald-400 font-bold mt-2 inline-flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Com apenas 2 carros no final de semana
+            </span>
+          </div>
+        </div>
+
+        <!-- Cenário 2: R$ 5.400 (Plano Acelerado - Card VIP) -->
+        <div class="group relative rounded-3xl bg-gradient-to-b from-[#14231E] via-[#0E1714] to-[#08090C] border-2 border-emerald-500/60 transition-all duration-300 p-6 sm:p-8 text-left shadow-[0_0_40px_rgba(16,185,129,0.18)] hover:shadow-[0_0_55px_rgba(16,185,129,0.3)] flex flex-col justify-between hover:scale-[1.01]">
+          
+          <!-- Selo Flutuante Topo -->
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-black text-[10px] uppercase tracking-widest px-3.5 py-1 rounded-full shadow-lg">
+            ⭐ Mais Recomendado
+          </div>
+
+          <div>
+            <!-- Header do Card corrigido (não amassa) -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+              <span class="px-3.5 py-1.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                Plano Acelerado (Recomendado)
+              </span>
+              <span class="text-xs font-bold text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-lg border border-emerald-500/30">
+                4 serviços/semana
+              </span>
+            </div>
+
+            <!-- Dados com destaque verde neon -->
+            <div class="space-y-3 mb-6">
+              <p class="text-xs text-slate-300 flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                Atendendo 1 no pós-trabalho + fim de semana
+              </p>
+              <p class="text-sm text-slate-200 flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                Cobrando com adicionais: <strong class="text-emerald-400 font-extrabold text-base ml-1">R$ 200 a R$ 250</strong>
+              </p>
+              <p class="text-xs text-slate-300 flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                Total em 7 semanas: <strong class="text-white font-bold ml-1">24 a 28 clientes</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- Totalizador VIP -->
+          <div class="pt-5 border-t border-emerald-500/20 bg-emerald-950/20 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-6 sm:p-8 rounded-b-3xl">
+            <span class="text-[11px] uppercase tracking-wider text-emerald-400/90 block font-bold">Faturamento até o Natal:</span>
+            <div class="text-3xl sm:text-4xl font-black text-emerald-400 mt-1 drop-shadow-[0_0_25px_rgba(16,185,129,0.5)]">
+              R$ 5.400,00+
+            </div>
+            <span class="text-xs text-emerald-300 font-bold mt-2 inline-flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Ceia farta, presentes e janeiro no azul
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Redesenhado (Efeito Shimmer + Glow Forte) -->
+      <div class="mt-12">
+        <a href="#oferta" class="badge-shimmer relative inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 text-sm sm:text-base font-black tracking-wide text-white uppercase rounded-2xl bg-brand-red hover:bg-brand-redHover transition-all duration-300 shadow-[0_0_35px_rgba(229,9,20,0.45)] hover:scale-105">
+          QUERO ME ESPECIALIZAR
+          <i data-lucide="arrow-right" class="w-5 h-5 ml-2.5"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       4. ANTES E DEPOIS (Prova Visual Irrefutável)
+  ============================================== -->
+  <section class="py-20 bg-[#0E1117] border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      
+      <span class="text-xs font-black tracking-widest uppercase text-brand-gold">Impacto Visual Imediato</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white mt-1 mb-3">
+        O QUE FAZ O CLIENTE PAGAR R$ 200 SEM PENSAR DUAS VEZES
+      </h2>
+      <p class="text-sm sm:text-base text-slate-400 max-w-xl mx-auto mb-12">
+        Você vai aprender técnicas que transformam a aparência de qualquer carro e deixam o dono impressionado.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Card 1: Pintura e Espelhamento -->
+        <div class="bg-brand-cardDark rounded-2xl overflow-hidden border border-brand-cardBorder p-3 shadow-xl">
+          <div class="grid grid-cols-2 gap-2 relative">
+            <div class="relative">
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-black uppercase bg-brand-red text-white z-10 shadow">Antes (Pintura Fosca)</span>
+              <img src="pintura-antes.jpg" alt="Antes da Revitalização" class="w-full h-52 object-cover rounded-lg bg-slate-900">
+            </div>
+            <div class="relative">
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-black uppercase bg-emerald-500 text-white z-10 shadow">Depois (Espelhamento)</span>
+              <img src="pintura-depois.jpg" alt="Depois do Espelhamento" class="w-full h-52 object-cover rounded-lg bg-slate-900">
+            </div>
+          </div>
+          <div class="p-3 text-left">
+            <p class="text-sm font-bold text-white">Revitalização & Brilho Profundo</p>
+            <p class="text-xs text-slate-400 mt-0.5">Custo de produto gasto: R$ 8,50 | Preço cobrado do cliente: R$ 180,00</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Faróis e Plásticos -->
+        <div class="bg-brand-cardDark rounded-2xl overflow-hidden border border-brand-cardBorder p-3 shadow-xl">
+          <div class="grid grid-cols-2 gap-2 relative">
+            <div class="relative">
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-black uppercase bg-brand-red text-white z-10 shadow">Antes (Amarelado)</span>
+              <img src="farol-antes.jpg" alt="Antes do Farol" class="w-full h-52 object-cover rounded-lg bg-slate-900">
+            </div>
+            <div class="relative">
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-black uppercase bg-emerald-500 text-white z-10 shadow">Depois (Cristalino)</span>
+              <img src="farol-depois.jpg" alt="Depois do Farol" class="w-full h-52 object-cover rounded-lg bg-slate-900">
+            </div>
+          </div>
+          <div class="p-3 text-left">
+            <p class="text-sm font-bold text-white">Restauração de Faróis & Plásticos</p>
+            <p class="text-xs text-slate-400 mt-0.5">Tempo de execução: 45 min | Preço cobrado do cliente: R$ 120 a R$ 150</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       5. CONTEÚDO PRÁTICO (3 PASSOS RÁPIDOS)
+  ============================================== -->
+  <section class="py-16 sm:py-20 bg-gradient-to-b from-[#08090C] via-[#0E1117] to-[#08090C] border-b border-white/5 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <!-- Cabeçalho Rápido -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-black tracking-widest uppercase text-brand-red">Simples e Sem Enrolação</span>
+        <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight text-white mt-1">
+          O QUE VOCÊ VAI DOMINAR EM 3 ETAPAS
+        </h2>
+        <p class="mt-2 text-xs sm:text-sm text-slate-400">
+          Um roteiro mastigado para você aprender a técnica hoje e fechar seus primeiros serviços ainda nesta semana:
+        </p>
+      </div>
+
+      <!-- 3 Cards Limpos e Escaneáveis -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <!-- Passo 1: O Dia da Compra -->
+        <div class="p-6 rounded-3xl bg-gradient-to-b from-[#141822] to-[#0D1017] border border-emerald-500/40 shadow-lg hover:border-emerald-500 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-black text-sm">
+                01
+              </span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-emerald-500/20 text-emerald-300">
+                Dia 0: Imediato
+              </span>
+            </div>
+            <h3 class="text-base font-extrabold text-white uppercase mb-2">Aprenda a Técnica Principal</h3>
+            <p class="text-xs text-slate-400 font-medium mb-4">Capítulos 1 e 2</p>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Lista secreta de produtos com menos de R$ 100.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Passo a passo com fotos: <strong>faça o seu 1º farol hoje mesmo</strong>.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Passo 2: O Aperfeiçoamento -->
+        <div class="p-6 rounded-3xl bg-gradient-to-b from-[#141822] to-[#0D1017] border border-white/10 hover:border-slate-500 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-white flex items-center justify-center font-black text-sm">
+                02
+              </span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-slate-800 text-slate-300">
+                Dias 2 a 4
+              </span>
+            </div>
+            <h3 class="text-base font-extrabold text-white uppercase mb-2">Domínio & Precificação</h3>
+            <p class="text-xs text-slate-400 font-medium mb-4">Capítulos 3, 4 e 5</p>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Proteção e acabamento para durar meses sem manchar.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Como cobrar <strong>R$ 150 a R$ 300</strong> com 85% de lucro limpo.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Passo 3: Clientes -->
+        <div class="p-6 rounded-3xl bg-gradient-to-b from-[#141822] to-[#0D1017] border border-white/10 hover:border-slate-500 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-white flex items-center justify-center font-black text-sm">
+                03
+              </span>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-slate-800 text-slate-300">
+                Dias 5 a 7
+              </span>
+            </div>
+            <h3 class="text-base font-extrabold text-white uppercase mb-2">Clientes & Agenda Cheia</h3>
+            <p class="text-xs text-slate-400 font-medium mb-4">Capítulos 6 e 7</p>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Mensagens prontas para fechar no WhatsApp e Instagram.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Roteiro dos 30 dias para criar clientes recorrentes.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Box Compacto: Super Bônus + Extras -->
+      <div class="mt-6 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-amber-500/10 via-brand-cardDark to-brand-cardDark border border-brand-gold/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-gold/20 border border-brand-gold/40 text-brand-gold flex items-center justify-center shrink-0">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-black uppercase bg-brand-gold text-slate-950 px-2 py-0.5 rounded">Bônus Incluso</span>
+              <span class="text-xs text-slate-400 line-through">R$ 97,00</span>
+            </div>
+            <h4 class="text-sm sm:text-base font-black text-white uppercase mt-0.5">Guia de Detalhamento Express + Planilhas e Scripts de WhatsApp</h4>
+            <p class="text-xs text-slate-400">Aprenda a agregar a lavagem técnica para subir seu atendimento de R$ 150 para <strong>R$ 300+ por carro</strong>.</p>
+          </div>
+        </div>
+        <span class="text-xs font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-lg shrink-0">
+          ✓ GRÁTIS HOJE
+        </span>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-10 text-center">
+        <a href="#oferta" class="badge-shimmer relative inline-flex items-center justify-center px-10 py-4 text-sm sm:text-base font-black tracking-wide text-white uppercase rounded-2xl bg-brand-red hover:bg-brand-redHover transition-all duration-300 shadow-[0_0_35px_rgba(229,9,20,0.45)] hover:scale-105">
+          QUERO ME ESPECIALIZAR
+          <i data-lucide="arrow-right" class="w-5 h-5 ml-2.5"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       6. PROVA SOCIAL (Resultados Rápidos)
+  ============================================== -->
+  <section class="py-20 bg-brand-dark border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="text-xs font-black tracking-widest uppercase text-brand-red">Resultados Reais</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-white mt-1 mb-2">
+          QUEM APLICOU, LUCROU NO 1º DIA
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400">
+          Mensagens reais de quem seguiu o método passo a passo:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Review 1 -->
+        <div class="bg-brand-cardDark border border-brand-cardBorder rounded-2xl p-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center font-black text-xs border border-brand-red/30">CM</div>
+            <div>
+              <p class="text-xs font-bold text-white">Carlos Mendes — Campinas/SP</p>
+              <div class="flex text-amber-400 text-xs mt-0.5">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 italic">"Comecei no condomínio aqui onde moro. Cobro R$ 180 por carro. No sábado fiz dois e domingo fiz mais um. Foram R$ 540 limpos no primeiro fim de semana. O roteiro de mensagem no WhatsApp funciona demais."</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-brand-cardDark border border-brand-cardBorder rounded-2xl p-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center font-black text-xs border border-brand-red/30">RS</div>
+            <div>
+              <p class="text-xs font-bold text-white">Rodrigo Silva — Belo Horizonte/MG</p>
+              <div class="flex text-amber-400 text-xs mt-0.5">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 italic">"Tava preocupado de como ia passar o final de ano sem grana. Comprei o material com desconfiança, gastei 80 conto na autopeça e já atendi 4 carros essa semana. O método é direto ao ponto e não tem enrolação."</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-brand-cardDark border border-brand-cardBorder rounded-2xl p-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center font-black text-xs border border-brand-red/30">AL</div>
+            <div>
+              <p class="text-xs font-bold text-white">Anderson Lima — Curitiba/PR</p>
+              <div class="flex text-amber-400 text-xs mt-0.5">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 italic">"Eu já lavava carro no balde por 35 reais. Aprendi as técnicas do e-book e empacotei o serviço de polimento manual + faróis. Hoje não fecho nada por menos de R$ 200. Mudou minha realidade."</p>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="bg-brand-cardDark border border-brand-cardBorder rounded-2xl p-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center font-black text-xs border border-brand-red/30">BT</div>
+            <div>
+              <p class="text-xs font-bold text-white">Bruno Teixeira — Goiânia/GO</p>
+              <div class="flex text-amber-400 text-xs mt-0.5">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 italic">"O bônus de detalhamento foi o diferencial. Fiz um carro completo de um vizinho no feriado e ganhei R$ 320 em 3 horas de trampo. Recomendo para qualquer um que queira dinheiro rápido e honesto."</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       7. OFERTA PRINCIPAL / CHECKOUT DE CONVERSÃO MÁXIMA
+  ============================================== -->
+  <section id="oferta" class="py-20 bg-gradient-to-b from-[#08090C] via-[#121620] to-[#08090C] relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Pitch Persuasivo & Quebra de Objeções (Lado Esquerdo) -->
+        <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-red/15 border border-brand-red/30 rounded-full text-brand-red text-xs font-black uppercase tracking-wider">
+            🎄 Condição de Natal
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
+            GARANTA O SEU ACESSO HOJE E PAGUE COM O SEU <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">1º SERVIÇO</span>
+          </h2>
+          
+          <p class="text-sm text-slate-300 leading-relaxed font-normal">
+            A conta é simples: cobrando <strong class="text-white">R$ 150 a R$ 200</strong> no primeiro carro, você já paga a especialização, o kit de produtos e ainda coloca lucro limpo no bolso no mesmo dia.
+          </p>
+
+          <!-- Comparação Psicológica -->
+          <div class="p-4 rounded-2xl bg-[#0D1017] border border-white/10 text-left space-y-1.5">
+            <div class="flex items-center gap-2 text-brand-gold font-black text-xs uppercase">
+              <i data-lucide="scale" class="w-4 h-4"></i> Pense no Seguinte:
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Você gasta R$ 47 em uma pizza num domingo à noite. Aqui você investe esses mesmos <strong class="text-white">R$ 47 uma única vez</strong> para ter o passo a passo de faturar de <strong class="text-emerald-400">R$ 3.000 a R$ 5.000 até o Natal</strong>.
+            </p>
+          </div>
+
+          <!-- Box de Garantia Blindada -->
+          <div class="p-4 rounded-2xl bg-emerald-950/20 border border-emerald-500/30 text-left flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-black text-emerald-400 uppercase tracking-wide">Risco Zero: Garantia de 7 Dias</h4>
+              <p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Leia o material, veja as técnicas. Se achar que não valeu 10x mais do que pagou, basta um clique para receber 100% do seu dinheiro de volta.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Box de Preço / Checkout Card (Lado Direito) -->
+        <div class="lg:col-span-7">
+          <div class="bg-gradient-to-b from-[#141822] via-[#0E1118] to-[#0A0C10] border-2 border-brand-red rounded-3xl p-6 sm:p-9 shadow-[0_0_50px_rgba(229,9,20,0.35)] relative overflow-hidden">
+            
+            <!-- Faixa Topo: Escassez de Natal -->
+            <div class="text-center pb-6 border-b border-white/10">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-brand-red text-white rounded-full text-[11px] font-black uppercase tracking-wider mb-3 shadow-[0_0_15px_rgba(229,9,20,0.4)]">
+                <i data-lucide="flame" class="w-3.5 h-3.5 animate-bounce"></i>
+                LOTE PROMOCIONAL DE NATAL (ÚLTIMAS VAGAS)
+              </div>
+              
+              <!-- Ancoragem de Preço -->
+              <div class="text-xs text-slate-400 font-semibold">
+                Valor Total do Pacote De: <span class="line-through text-red-400 font-bold">R$ 249,90</span>
+              </div>
+              
+              <!-- Preço em Destaque Imbatível -->
+              <div class="mt-2 flex items-baseline justify-center gap-2">
+                <span class="text-sm sm:text-base text-slate-400 font-bold">Por apenas</span>
+                <span class="text-4xl sm:text-6xl font-black text-white tracking-tight drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]">
+                  R$ 47,00
+                </span>
+              </div>
+              
+              <div class="inline-block mt-2 px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-black">
+                ou até 5x de R$ 10,23 no cartão de crédito
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1.5 font-medium">Pagamento único • Acesso vitalício imediato</p>
+            </div>
+
+            <!-- Stack de Valor (Tudo o que ele leva com preços individuais) -->
+            <div class="py-5 border-b border-white/10 space-y-3">
+              <span class="text-[11px] font-black uppercase tracking-wider text-slate-400 block mb-1">
+                Veja tudo o que está incluso no seu acesso:
+              </span>
+
+              <div class="flex items-center justify-between text-xs sm:text-sm">
+                <span class="flex items-center gap-2 text-slate-200">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                  <strong>E-book Estética Lucrativa</strong> (Capítulos 1 a 7)
+                </span>
+                <span class="text-[11px] text-slate-500 line-through">R$ 97</span>
+              </div>
+
+              <div class="flex items-center justify-between text-xs sm:text-sm">
+                <span class="flex items-center gap-2 text-brand-gold font-medium">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                  <strong>BÔNUS:</strong> Guia de Detalhamento Express
+                </span>
+                <span class="text-[11px] text-emerald-400 font-bold uppercase">Grátis</span>
+              </div>
+
+              <div class="flex items-center justify-between text-xs sm:text-sm">
+                <span class="flex items-center gap-2 text-slate-200">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                  Scripts Prontos de WhatsApp e Instagram
+                </span>
+                <span class="text-[11px] text-emerald-400 font-bold uppercase">Grátis</span>
+              </div>
+
+              <div class="flex items-center justify-between text-xs sm:text-sm">
+                <span class="flex items-center gap-2 text-slate-200">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                  Lista Secreta de Produtos Baratos (- de R$ 100)
+                </span>
+                <span class="text-[11px] text-emerald-400 font-bold uppercase">Grátis</span>
+              </div>
+
+              <div class="flex items-center justify-between text-xs sm:text-sm">
+                <span class="flex items-center gap-2 text-slate-200">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                  Certificado Oficial de Conclusão Incluso
+                </span>
+                <span class="text-[11px] text-emerald-400 font-bold uppercase">Incluso</span>
+              </div>
+            </div>
+
+            <!-- Botão de Ação & Selos de Confiança -->
+            <div class="pt-6 space-y-4">
+              <!-- Substitua '#' pelo link do seu checkout -->
+              <a href="#" class="badge-shimmer relative w-full inline-flex items-center justify-center px-6 py-4 sm:py-5 rounded-2xl bg-brand-red hover:bg-brand-redHover text-white font-black text-base sm:text-lg uppercase tracking-wider transition-all duration-300 shadow-[0_0_35px_rgba(229,9,20,0.5)] hover:scale-[1.02]">
+                QUERO ME ESPECIALIZAR
+                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+              </a>
+
+              <p class="text-center text-[11px] text-slate-400 font-medium">
+                🔒 Clique no botão acima para ir ao pagamento 100% seguro via Hotmart
+              </p>
+              
+              <div class="flex items-center justify-center flex-wrap gap-4 pt-1 text-[11px] text-slate-400">
+                <span class="inline-flex items-center gap-1.5"><i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-400"></i> Hotmart</span>
+                <span class="inline-flex items-center gap-1.5"><i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i> Liberação no E-mail na Hora</span>
+                <span class="inline-flex items-center gap-1.5"><i data-lucide="shield" class="w-3.5 h-3.5 text-blue-400"></i> Garantia 7 Dias</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       8. FAQ (Eliminação Final de Objeções)
+  ============================================== -->
+  <section class="py-16 bg-[#08090C] border-t border-white/5">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-10">
+        <h2 class="text-xl sm:text-2xl font-black uppercase text-white tracking-tight">
+          PERGUNTAS FREQUENTES
+        </h2>
+        <p class="text-xs text-slate-400 mt-1">Tire todas as suas dúvidas antes de começar</p>
+      </div>
+
+      <div class="space-y-4 text-left">
+        
+        <div class="p-4 rounded-xl bg-brand-cardDark border border-brand-cardBorder">
+          <h4 class="text-sm font-bold text-white mb-1.5 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-brand-red"></i>
+            Preciso de oficina, espaço próprio ou garagem grande?
+          </h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Não! A grande maioria dos nossos alunos começa atendendo a domicílio (na garagem do próprio cliente) ou na garagem de casa nos finais de semana.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-cardDark border border-brand-cardBorder">
+          <h4 class="text-sm font-bold text-white mb-1.5 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-brand-red"></i>
+            Nunca mexi com carro na vida, eu consigo aprender?
+          </h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Sim. O método foi desenvolvido do zero para quem é leigo. A linguagem é simples, prática e sem termos técnicos difíceis. Se você sabe passar um pano e seguir uma receita, você executa o método com facilidade.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-cardDark border border-brand-cardBorder">
+          <h4 class="text-sm font-bold text-white mb-1.5 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-brand-red"></i>
+            Como eu recebo o material após o pagamento?
+          </h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            O acesso é imediato! Assim que o seu pagamento for aprovado (no Pix ou Cartão é na hora), você receberá um e-mail com o link para baixar o e-book e os bônus no seu celular ou computador.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-cardDark border border-brand-cardBorder">
+          <h4 class="text-sm font-bold text-white mb-1.5 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-brand-red"></i>
+            E se eu não gostar ou achar difícil?
+          </h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Você tem 7 dias de garantia incondicional. Se não gostar de qualquer coisa, você pede o reembolso na plataforma e devolvemos cada centavo.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       9. FOOTER COMPLIANCE
+  ============================================== -->
+  <footer class="py-10 bg-black text-slate-500 text-xs text-center border-t border-white/5 space-y-3">
+    <div class="max-w-4xl mx-auto px-4">
+      <p>© 2026 Estética Lucrativa. Todos os direitos reservados.</p>
+      <p class="text-[11px] text-slate-600 max-w-xl mx-auto leading-relaxed">
+        Este produto não garante a obtenção de resultados sem o devido trabalho prático. Os ganhos financeiros dependem unicamente da dedicação e aplicação das estratégias ensinadas no material.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       MINI DOCK FLUTUANTE (SLIM GLASSMORPHISM)
+  ============================================== -->
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+    <a 
+      href="#oferta" 
+      class="flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-[#0C0F14]/90 backdrop-blur-xl border border-white/15 hover:border-brand-red/60 shadow-[0_8px_25px_rgba(0,0,0,0.8),0_0_15px_rgba(229,9,20,0.2)] transition-all duration-300 hover:scale-105 active:scale-95 group"
+    >
+      <!-- Pulso de Vaga Ativa -->
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+      </span>
+
+      <!-- Tag de Preço -->
+      <div class="flex items-center gap-1.5 leading-none">
+        <span class="text-xs font-black text-white">Quero</span>
+      </div>
+
+      <!-- Botãozinho de Ação Integrado -->
+      <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-brand-red group-hover:bg-brand-redHover text-white text-[10px] font-black uppercase tracking-wider transition-colors shadow-sm">
+        Faturar
+        <i data-lucide="arrow-right" class="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform"></i>
+      </span>
+    </a>
+  </div>
+
+  <!-- Script Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
